@@ -3,10 +3,10 @@ import Model from '../models/model'
 
 export default class OrderControllers {
 
-    public static async getOrder(req: any, res : any)  {
-        const orders =  Model.findOrders()
-        res.json(await orders)
-     } 
+    public static async getOrders(req: Request, res: Response){
+        const orders = await Model.findOrders();
+        res.json(orders);
+    }
 
     public static async getOrderbyId(req: any, res : any)  {
         const id = req.params.id
@@ -23,7 +23,6 @@ export default class OrderControllers {
 
     public static async addOrder(req: any, res : any)  {
         const payload = req.body
-
         const orders = await storage.getItem('orders')
         const alreadyExists = orders.find((order: any) => order.id === payload.id)
 
