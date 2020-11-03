@@ -20,7 +20,8 @@ Question 3 : SOLID : - Le Principe de Responsabilité Unique (Single Responsibil
 - Le Principe d'Inversion des Dépendances (Dependency Inversion Principle).
 
 Ici le principe utilisé est le I :  Un client ne doit pas être contraint de dépendre d'interfaces qu'il n'utilise pas. Le problème est qu'il n'y a pas d'interfaces explicites en JS, cependant il y a des manières de contourner ce point. Il faut donc favoriser plusieurs interface plutôt qu'une seule interface. 
-About
-tiptop
 
-Topics
+
+Question 4 : 
+    - Le Design Patter utilisé dans cette question est l'Adaptateur, L’adaptateur fait fonctionner ensemble des classes qui n'auraient pas pu fonctionner sans lui, à cause d'une incompatibilité d'interfaces. celui-ci permet de modifier avec un simple fichier les infos du JSON. 
+
