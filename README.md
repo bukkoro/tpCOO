@@ -25,3 +25,5 @@ Ici le principe utilisé est le I :  Un client ne doit pas être contraint de d�
 Question 4 : 
     - Le Design Patter utilisé dans cette question est l'Adaptateur, L’adaptateur fait fonctionner ensemble des classes qui n'auraient pas pu fonctionner sans lui, à cause d'une incompatibilité d'interfaces. celui-ci permet de modifier avec un simple fichier les infos du JSON. 
 
+
+
