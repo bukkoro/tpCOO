@@ -1,39 +1,38 @@
 import storage from 'node-persist'
-import Model from '../models/model'
+import { Router, Request, Response } from 'express'
+import Model from '../models/models'
 
-export default class OrderControllers {
+export default class OrdersCtrl {
 
     public static async getOrders(req: Request, res: Response){
         const orders = await Model.findOrders();
         res.json(orders);
     }
 
-    public static async getOrderbyId(req: any, res : any)  {
+    public static async getIdOrders(req: Request, res: Response){
+
         const id = req.params.id
-
-        const orders = await storage.getItem('orders')
-        const result = orders.find((order: any) => order.id === parseInt(id, 10))
-
+        const orders = await Model.findOrders();
+        const result = Model.finId(orders, id)
         if (!result) {
             res.sendStatus(404)
         }
 
         res.json(result)
-    } 
+    }
 
-    public static async addOrder(req: any, res : any)  {
-        const payload = req.body
-        const orders = await storage.getItem('orders')
-        const alreadyExists = orders.find((order: any) => order.id === payload.id)
+    public static async postOrders(req: Request, res: Response){
+
+        const payload = req.body;
+        const orders = await Model.findOrders();
+        const alreadyExists = Model.findPayload(payload);
 
         if (alreadyExists) {
-            return res.sendStatus(409)
+            res.sendStatus(409)
         }
 
         orders.push(payload)
-
         await storage.setItem('orders', orders)
-
         res.sendStatus(201)
     }
 

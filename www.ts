@@ -1,6 +1,9 @@
-import App from "./app"
-import Server from "./server"
+#!/usr/bin/env node
 
-const app = new App()
+//import http from 'http'
+import Server from './server'
+import App from './app'
+
+const app = new App();
 const server = new Server(app.instance)
 server.start()

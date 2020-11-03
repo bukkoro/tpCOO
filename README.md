@@ -1,4 +1,4 @@
-Question 2 : choix du design pattern : MVC 
+Question 2 : choix du design pattern : MVC
 
 Une application conforme au motif MVC comporte trois types de modules : les modèles, les vues et les contrôleurs.
 
@@ -14,20 +14,13 @@ Contrôleur
 
 Module qui traite les actions de l'utilisateur, modifie les données du modèle et de la vue.
 
-On utilise ce design pattern car il permet : 
-    - une conception plus efficace et plus claire. Ceci étant du à la séparation des données de la Vue et du Contrôleur. 
-    - Une plus grande souplesse pour organiser le développement du site entre différents développeurs (indépendance des données, de l’affichage (webdesign) et des actions)
+On utilise ce design pattern car il permet : - une conception plus efficace et plus claire. Ceci étant du à la séparation des données de la Vue et du Contrôleur. - Une plus grande souplesse pour organiser le développement du site entre différents développeurs (indépendance des données, de l’affichage (webdesign) et des actions)
 
+Question 3 : SOLID : - Le Principe de Responsabilité Unique (Single Responsibility Principle). - Le Principe d'Ouverture-Fermeture (Open-Closed Principle) - Le Principe de Substitution de Liskov (Liskov Substitution Principle). - Le Principe de Ségrégation des Interfaces (Interface Segregation Principle).
+- Le Principe d'Inversion des Dépendances (Dependency Inversion Principle).
 
+Ici le principe utilisé est le I :  Un client ne doit pas être contraint de dépendre d'interfaces qu'il n'utilise pas. Le problème est qu'il n'y a pas d'interfaces explicites en JS, cependant il y a des manières de contourner ce point. Il faut donc favoriser plusieurs interface plutôt qu'une seule interface. 
+About
+tiptop
 
-Question 3 : 
-SOLID : 
-    - Le Principe de Responsabilité Unique (Single Responsibility Principle).
-    - Le Principe d'Ouverture-Fermeture (Open-Closed Principle)
-    - Le Principe de Substitution de Liskov (Liskov Substitution Principle).
-    - Le Principe de Ségrégation des Interfaces (Interface Segregation Principle).  
-    - Le Principe d'Inversion des Dépendances (Dependency Inversion Principle).
-
-    Ici le principe utilisé est le I :  Un client ne doit pas être contraint de dépendre d'interfaces qu'il n'utilise pas. Le problème est qu'il n'y a pas d'interfaces explicites en JS, cependant il y a des manières de contourner ce point. Il faut donc favoriser plusieurs interface plutôt qu'une seule interface. 
-
-    
+Topics
